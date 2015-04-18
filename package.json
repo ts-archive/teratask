@@ -1,0 +1,14 @@
+{
+  "name": "teratask",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "redis": "~0.8.6",
+    "lodash": "~2.2.1",
+    "winston": "~0.7.2",
+    "terafoundation": "terascope/terafoundation"
+  }
+}
