@@ -15,9 +15,9 @@ module.exports = function(customConfig) {
         redis: ['default', 'immediate'],
         worker: worker,
         master: master
-    }
+    };
 
     _.merge(config, customConfig);
 
     var foundation = require('terafoundation')(config);
-}
+};
