@@ -1,0 +1,40 @@
+{
+  "teratask": {
+    "tasks": []
+  },
+  "terafoundation": {
+    "environment": "development",
+    "log_path": "/Users/jarednoble/Desktop/logs",
+    "connectors": {
+      "elasticsearch": {
+        "default": {
+          "host": [
+            "127.0.0.1:9200"
+          ],
+          "keepAlive": false,
+          "maxRetries": 5,
+          "maxSockets": 20
+        }
+      },
+      "statsd": {
+        "default": {
+          "host": "127.0.0.1",
+          "mock": false
+        }
+      },
+      "mongodb": {
+        "default": {
+          "servers": "mongodb://localhost:27017/hdfs"
+        }
+      },
+      "redis": {
+        "default": {
+          "host": "127.0.0.1"
+        },
+        "immediate": {
+          "host": "127.0.0.1"
+        }
+      }
+    }
+  }
+}
