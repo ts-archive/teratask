@@ -2,7 +2,7 @@
  If TeraServer is loaded as a module we can still initialize while giving the app
  finer control over what services are loaded.
  */
-
+var config_schema = require('./system_schema').config_schema;
 var _ = require('lodash');
 
 module.exports = function(customConfig) {
@@ -10,11 +10,11 @@ module.exports = function(customConfig) {
     var master = require('./lib/master');
 
     var config = {
-        name: 'TeraTask',
-        mongodb: ['default'],
+        name: 'teratask',
         redis: ['default', 'immediate'],
         worker: worker,
-        master: master
+        master: master,
+        config_schema: config_schema
     };
 
     _.merge(config, customConfig);
